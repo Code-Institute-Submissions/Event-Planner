@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif:100,200,300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap');
+/*-------------------------------------------------------Colors---*/
+
+/*-------------------------------------------------------Heading---*/
+
+.featured {
+    font-family: 'Glegoo', serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.acts {
+    text-align: center;
+}

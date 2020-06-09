@@ -32,7 +32,7 @@
 /*-------------------------------------------------------------------Footer-----*/
 
 .social-links {
-    padding-bottom: 15px;
+    padding-top: 20px;
 }
 
 .social-links li a i {
@@ -52,9 +52,9 @@
 }
 
 .social-links li a i:hover {
-    background: #e84610;
+    background: #7ab6df;
 }
 
-.footer-details {
-    padding: 20px;
+.form {
+    margin-left: 50px;
 }

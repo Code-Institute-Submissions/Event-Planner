@@ -55,6 +55,6 @@
     background: #7ab6df;
 }
 
-.form {
-    margin-left: 50px;
+.subscribe-bar {
+    display: inline-block;
 }

@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_iezLnx0DcuKeB2NUx8BAK");
+        })();
+</script>
+
     <title>Event-Planner</title>
 </head>
 <body>
@@ -146,6 +154,21 @@
   </div>
 </div>
 
+<!----------------------------------------------------------------------------------------Subscribe-->
+    <div class="container">
+        <div class="row">
+            <div class="col featured subscribe-bar">
+                <form class="input-group">
+                    <div class="form-group col-sm-4 mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only">E-Mail</label>
+                        <input type="text" class="form-control" id="inputPassword2" placeholder="E-Mail">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Subscribe!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
 
@@ -176,7 +199,6 @@
       </li>
     </ul>
     <!-- Social buttons -->
-
   </div>
 
   <!-- Copyright -->
@@ -186,6 +208,7 @@
   <!-- Copyright -->
 
 </footer>
+<script src="assets/js/sendEmail.js"></script>
 <!-- Footer -->
 </body>
 </html>

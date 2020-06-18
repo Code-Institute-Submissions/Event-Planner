@@ -124,13 +124,13 @@
     <div class="container">
         <div class="row">
             <div class="col featured subscribe-bar">
-                <form onsubmit="return sendMail(this);">
-                    <div class="form-group col-sm-4 mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">E-Mail</label>
-                        <input type="text" class="form-control" id="inputPassword2" placeholder="E-Mail">
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-2">Subscribe!</button>
-                </form>
+                <div class="center-form">
+                    <form onsubmit="return sendMail(this);">
+                        <label for="email" class="sr-only">E-Mail</label>
+                        <input type="text" name="email" class="form-control" id="emailaddress" placeholder="E-Mail" required>
+                        <button type="submit" class="btn btn-primary mb-2">Subscribe!</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

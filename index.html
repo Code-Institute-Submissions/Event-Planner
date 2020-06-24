@@ -141,6 +141,7 @@ function createDB() {
 
     //on upgrade needed
     request.onupgradeneeded = e => {
+        const db = e.target.result
         alert("Upgrade has been requested");
     }
     //on success

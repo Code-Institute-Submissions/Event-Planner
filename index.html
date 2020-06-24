@@ -149,7 +149,7 @@ function createDB() {
     }
     //onerror
     request.onerror = e => {
-        alert("Error!")
+        alert(`Error: + ${e.target.error} was found`)
     }
 }
 </script>

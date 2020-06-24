@@ -125,6 +125,37 @@
     <script src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/event-discovery/1.0.0/lib/main-widget.js"></script>
 
 </div>
+<div class="container">
+    <div class="row">
+        DB <input type = "text" value = "notes" id ="txtDB">
+
+<button id ="BtnCreateDB">Search</button>
+    <script>
+
+const BtnCreateDB = document.getElementById("BtnCreateDB")
+BtnCreateDB.addEventListener("click", createDB)
+function createDB() {
+    const dbName = document.getElementById("txtDB").value
+
+    const request = indexedDB.open("dbName")
+
+    //on upgrade needed
+    request.onupgradeneeded = e => {
+        alert("Upgrade has been requested");
+    }
+    //on success
+    request.onsuccess = e => {
+        alert("Success!");
+    }
+    //onerror
+    request.onerror = e => {
+        alert("Error!")
+    }
+}
+</script>
+    </div>
+</div>
+
 <!----------------------------------------------------------------------------------------Subscribe-->
     <div class="container">
         <div class="row">

@@ -59,3 +59,8 @@
     display: inline-block;
     text-align: center;
 }
+
+.events_box {
+    display: inline-block;
+    margin: 0 auto;
+}

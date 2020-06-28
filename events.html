@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_iezLnx0DcuKeB2NUx8BAK");
+        })();
+    </script>
+
+    <title>Event-Planner</title>
+</head>
+<body>
+<header>
+
+<!--------------------------------------------------------------------------------------------------------Navigation Bar---->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Artist Watch</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="events.html">Events<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search Events" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</header>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+        <div id="events-panel" class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Events</h3>
+          </div>
+          <div class="panel-body">
+            <div id="events" class="list-group">
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Event title</h4>
+                <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="venue"></p>
+              </a>
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Event title</h4>
+                <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="venue"></p>
+              </a>
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Event title</h4>
+                <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="venue"></p>
+              </a>
+              <a href="#" class="list-group-item">
+                <h4 class="list-group-item-heading">Event title</h4>
+                <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="venue"></p>
+              </a>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <nav>
+              <ul class="pager">
+                <li id="prev" class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+                <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        
+        <div id="attraction-panel" class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Attraction</h3>
+          </div>
+          <div id="attraction" class="panel-body">
+            <h4 class="list-group-item-heading">Attraction title</h4>
+            <img class="col-xs-12" src="">
+            <p id="classification"></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline social-links text-center">
+        <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
+            <i class="fa fa-facebook-f"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
+            <i class="fa fa-twitter"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+            <i class="fa fa-linkedin"> </i>
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
+            <i class="fa fa-youtube"> </i>
+            </a>
+        </li>
+        </ul>
+        <!-- Social buttons -->
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a>Event-Planner.com</a>
+    </div>
+    <!-- Copyright -->
+
+    </footer>
+    <script src="assets/js/sendEmail.js"></script>
+    <script src="assets/js/events.js"></script>
+<!-- Footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/js/events.js"></script>
+  </body>
+  </html>

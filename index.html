@@ -34,17 +34,15 @@
         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="about.html">About<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="events.html">Events<span class="sr-only"></span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search Events" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      <div class="col-md-5">
-    <div class="list-group" id="show-list">
-        <a href="#" class="list-group-item list-group-item-action">The Octovpus Quartet</a>
-    </div>
-  </div>
     </form>
   </div>
 </nav>
@@ -132,35 +130,39 @@
 <button id ="BtnCreateDB">Search</button>
     <script>
 
-const BtnCreateDB = document.getElementById("BtnCreateDB")
-BtnCreateDB.addEventListener("click", createDB)
-function createDB() {
-    const dbName = document.getElementById("txtDB").value
+                let db = null
+                const BtnCreateDB = document.getElementById("BtnCreateDB")
+                BtnCreateDB.addEventListener("click", createDB)
 
-    const request = indexedDB.open("Up Coming Events")
+                
 
-    //on upgrade needed
-    request.onupgradeneeded = e => {
-        const db = e.target.result
-        /*notes = {
-            Performance: "Tupac"
-            Venue: "The_Sugar_Club"
-            Date: "20/10/2020"
-        }*/
-        const upComingEvents = db.createObjectStore("Future_Events", {keyPath:"Performance"})
- 
-        alert("Upgrade has been requested");
-    }
-    //on success
-    request.onsuccess = e => {
-        const db = e.target.result
-        alert(`Success you have updated your entry ${db.name}`);
-    }
-    //onerror
-    request.onerror = e => {
-        alert(`Error: + ${e.target.error} was found`)
-    }
-}
+                function createDB() {
+                    const dbName = document.getElementById("txtDB").value
+
+                    const request = indexedDB.open("Up Coming Events")
+
+                    //on upgrade needed
+                    request.onupgradeneeded = e => {
+                        db = e.target.result
+                        /*notes = {
+                            Performance: "Tupac"
+                            Venue: "The_Sugar_Club"
+                            Date: "20/10/2020"
+                        }*/
+                        const upComingEvents = db.createObjectStore("Future_Events", {keyPath:"Performance"})
+                
+                        alert("Upgrade has been requested");
+                    }
+                    //on success
+                    request.onsuccess = e => {
+                        db = e.target.result
+                        alert(`Success you have updated your entry ${db.name}`);
+                    }
+                    //onerror
+                    request.onerror = e => {
+                        alert(`Error: + ${e.target.error} was found`)
+                    }
+                }
 </script>
     </div>
 </div>

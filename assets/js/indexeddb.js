@@ -1,7 +1,7 @@
 DB<input type = "text" value = "notes" id ="txtDB">
 <button id ="BtnCreateDB">Search</button>
 
-function creatDB() {
+function createDB() {
     const dbName = document.getElementById("textDB").value
     const request = indexedDB.open("dbName")
 

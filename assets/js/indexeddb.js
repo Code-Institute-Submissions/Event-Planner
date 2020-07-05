@@ -1,6 +1,8 @@
+/*creates inputs for Database*/
 DB<input type = "text" value = "notes" id ="txtDB">
+/*creates search button*/
 <button id ="BtnCreateDB">Search</button>
-
+/*creates database function*/
 function createDB() {
     const dbName = document.getElementById("textDB").value
     const request = indexedDB.open("dbName")

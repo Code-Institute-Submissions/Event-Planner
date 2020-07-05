@@ -27,6 +27,7 @@
     }
 
     div#map {min-height: 360px;}
+    div#search {min-height: 360px;}
 }
 
 /*-------------------------------------------------------------------Footer-----*/
@@ -63,4 +64,11 @@
 .events_box {
     display: inline-block;
     margin: 0 auto;
+}
+
+.heading {
+    font-size: 30px;
+    padding: 16px 0;
+    color: #444;
+    text-align: center;
 }

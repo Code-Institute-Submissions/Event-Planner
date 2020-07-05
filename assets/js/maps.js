@@ -1,3 +1,4 @@
+/*calls map function*/
 function initMap() {
             var map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 3,
@@ -6,7 +7,7 @@ function initMap() {
                     lng: -33.134766
                 }
             });
-
+/* variable label identifiers for map*/
             var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             var markers = locations.map(function(location, i) {
@@ -15,11 +16,12 @@ function initMap() {
                     label: labels[i % labels.length]
                 });
             });
-
+/*marker cluster for maps function with image path*/
             var markerCluster = new MarkerClusterer(map, markers, {
                 imagePath:'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
             });
         }
+/*custom locations for dublin events as per index.html*/
             var locations = [{
                 lat: 53.347306, 
                 lng: -6.228974

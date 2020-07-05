@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/style.css';
+import axios from 'axios';
 
+document.getElementById("search");
 
 class Search extends React.Component {
 
@@ -16,10 +18,12 @@ class Search extends React.Component {
 
         handleOnInputChange = (event) => {
             const query = event.target.value;
-            console.warn(query);
+            this.setState( state= {query:query, loading: true, message: ""} );
         };
 
     render() {
+        const {query}=this.state;
+        console.log(this.state);
         return (
             <div className="container">
                 {/*Heading*/}
@@ -28,7 +32,8 @@ class Search extends React.Component {
                 <label className="search-label" htmlFor="search-input">
                 <input 
                     type="text"
-                    value=""
+                    name="query"
+                    value={query}
                     id="search-input"
                     placeholder="Search..."
                     onChange={this.handleOnInputChange}

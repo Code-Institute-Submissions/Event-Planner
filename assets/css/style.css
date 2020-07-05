@@ -27,7 +27,7 @@
     }
 
     div#map {min-height: 360px;}
-    div#search {min-height: 360px;}
+
 }
 
 /*-------------------------------------------------------------------Footer-----*/
@@ -71,4 +71,9 @@
     padding: 16px 0;
     color: #444;
     text-align: center;
+}
+
+.page-left-right {
+    text-align: center;
+    display: inline;
 }

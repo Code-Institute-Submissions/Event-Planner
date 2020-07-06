@@ -85,7 +85,8 @@ Ticketmaster widget on the home page to book the show mitigating any data protec
 
 Wireframes for the main navigation pages can be found below -
 
-- [Wireframes]
+ --Wireframes--
+ 
 - [Home-Page](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Event-Planner-Home.png)
 - [Social-Page](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Event-Planner-Social.png)
 - [Events-Page](https://github.com/Karlitoyo/Event-Planner/blob/master/assets/balsamiq/Event-Planner-Events.png)

@@ -35,7 +35,7 @@
         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.html">About<span class="sr-only"></span></a>
+        <a class="nav-link" href="social.html">Social<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="events.html">Events<span class="sr-only"></span></a>
@@ -112,63 +112,58 @@
             electric takes on modern classics.</p>
     </div>
   </div>
+</div>
 <!------------------------------------------------Map div-->
   <div id="map"></div>
 <!------------------------------------------------Ticketmaster Widget-->
-    <div w-type="event-discovery" w-tmapikey="k8iNAX9SE7TDn02RbQfflg1DikAwjRus" w-googleapikey="AIzaSyBnXc4AL_aE-L2XX4ms3njCqYAuwvzumT0" 
-         w-keyword="" w-theme="simple" w-colorscheme="light" w-width="350" w-height="600" w-size="25" w-border="0" w-borderradius="4" 
-         w-radius="25" w-period="year" w-layout="vertical" w-attractionid="" w-promoterid="" w-venueid="" w-affiliateid="" w-segmentid="" 
-         w-proportion="custom" w-titlelink="off" w-sorting="groupByName" w-id="id_1hj3bh" w-source="ticketmaster" w-branding="Ticketmaster" 
-         w-countrycode="IE" w-postalcode="" w-city="" w-latlong="">
+    <div class="row ticket-master">
+        <div w-type="event-discovery" w-tmapikey="pLOeuGq2JL05uEGrZG7DuGWu6sh2OnMz" w-googleapikey="AIzaSyBnXc4AL_aE-L2XX4ms3njCqYAuwvzumT0" w-keyword="" 
+             w-theme="oldschool" w-colorscheme="light" w-width="100%" w-height="550" w-size="25" w-border="4" w-borderradius="0" w-postalcode="" w-radius="25" 
+             w-city="" w-period="month" w-layout="fullwidth" w-attractionid="" w-promoterid="" w-venueid="" w-affiliateid="" w-segmentid="" w-proportion="custom" 
+             w-titlelink="off" w-sorting="groupByName" w-id="id_so4y8v" w-countrycode="IE" w-source="" w-branding="Ticketmaster" w-latlong="">
+        </div>
     </div>
-    <script src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/event-discovery/1.0.0/lib/main-widget.js"></script>
 
-</div>
 
 <!------------------------------------indexeddb container-->
-<div class="container">
-    <div class="row">
-        Events <input type = "text" value = "Search Events" id ="txtDB">
 
-<button id ="BtnCreateDB">Search</button>
     <script>
 
-                let db = null
-                const BtnCreateDB = document.getElementById("BtnCreateDB")
-                BtnCreateDB.addEventListener("click", createDB)
+                //let db = null
+                //const BtnCreateDB = document.getElementById("BtnCreateDB")
+                //BtnCreateDB.addEventListener("click", createDB)
 
                 
 
-                function createDB() {
-                    const dbName = document.getElementById("txtDB").value
+                //function createDB() {
+                    //const dbName = document.getElementById("txtDB").value
 
-                    const request = indexedDB.open("Up Coming Events")
+                    //const request = indexedDB.open("Up Coming Events")
 
-                    //on upgrade needed
-                    request.onupgradeneeded = e => {
-                        db = e.target.result
+                    /*on upgrade needed*/
+                    //request.onupgradeneeded = e => {
+                        //db = e.target.result
                         /*notes = {
                             Performance: "Kings of Leon"
                             Venue: "The_Sugar_Club"
                             Date: "20/10/2020"
                         }*/
-                        const upComingEvents = db.createObjectStore("Future_Events", {keyPath:"Performance"})
+                        //const upComingEvents = db.createObjectStore("Future_Events", {keyPath:"Performance"})
                 
-                        alert("Upgrade has been requested");
+                        //alert("Upgrade has been requested");
                     }
-                    //on success
-                    request.onsuccess = e => {
-                        db = e.target.result
-                        alert(`Success you have updated your entry ${db.name}`);
+                    /*on success*/
+                    //request.onsuccess = e => {
+                        //db = e.target.result
+                        //alert(`Success you have updated your entry ${db.name}`);
                     }
-                    //onerror
-                    request.onerror = e => {
-                        alert(`Error: + ${e.target.error} was found`)
+                    /*onerror*/
+                    //request.onerror = e => {
+                        //alert(`Error: + ${e.target.error} was found`)
                     }
                 }
 </script>
-    </div>
-</div>
+
 
 <!----------------------------------------------------------------------------------------Subscribe-->
     <div class="container">
@@ -184,6 +179,23 @@
             </div>
         </div>
     </div>
+
+    <button class="open-button" onclick="openForm()">Hi There! Click Me!</button>
+	<div class="form-popup" id="myForm">
+		<form class="form-container">
+			<h1>Thanks for Visiting</h1>
+
+			<label><b>Please Subscribe to the Service at the bottom of the page!</b></label>
+			<p> Lots of Great Content!</p>
+
+			<label><b>Event-Planner</b></label>
+			<p>Stay Classy :)</p>
+
+			<button type="btn" class="btn cancel" onclick="closeForm();return false">Close</button>
+		</form>
+	</div>
+	<!---------------------------------------------------------------------------JS Script------>
+
 
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
@@ -226,12 +238,14 @@
 
 </footer>
 <!-- Footer -->
-<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
 	<script src="/maps/documentation/javascript/examples/markerclusterer/markerclustererplus@4.0.1.min.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnXc4AL_aE-L2XX4ms3njCqYAuwvzumT0&callback=initMap"></script>
+    <script src="https://ticketmaster-api-staging.github.io/products-and-docs/widgets/event-discovery/1.0.0/lib/main-widget.js"></script>
     <script src="assets/js/maps.js"></script>
     <script src="assets/js/sendEmail.js"></script>
     <script src="assets/js/search.js"></script>
-    
+    <script src="assets/js/contact.js"></script>
+ 
 </body>
 </html>

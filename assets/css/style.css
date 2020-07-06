@@ -77,3 +77,64 @@
     text-align: center;
     display: inline;
 }
+
+.open-button {
+  background-color: #555;
+  color: #fafafa;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 200px;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+ .form-container{
+  max-width: 300px;
+  padding: 10px;
+  background-color: black;
+  color: #fafafa;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------Ticketmaster Widget*/
+
+.ticket-master {
+    display: inline-block;
+    margin: 0 auto;
+    min-width: 100%;
+}
+
+@media(min-width:375px) {
+    .ticket-master {
+        max-width: 350px;
+    }
+}

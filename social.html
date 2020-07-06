@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 <!--------------------------------------------------------------------------------------------e-mail js function-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
 <script type="text/javascript">
    (function(){
       emailjs.init("user_iezLnx0DcuKeB2NUx8BAK");
@@ -35,7 +35,7 @@
         <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="social.html">Social<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="events.html">Events<span class="sr-only"></span></a>
@@ -95,7 +95,6 @@
   </div>
 <div class="card-columns">
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Sarah</h5>
       <p class="card-text">"I had the best night of my life! I couldnt believe that my favourite band were in town! I checked the website last minute and there they were playing in Dublin!!"</p>
@@ -112,7 +111,6 @@
     </blockquote>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Ben</h5>
       <p class="card-text">"All the best show's in town are on the website! I don't make plans unless I check Event-Planner first!!"</p>
@@ -135,9 +133,6 @@
       <p class="card-text">"Found out a last minute gig released more tickets at the door!! So F***'n happy right now :)"</p>
       <p class="card-text"><small class="text-muted">Annonymous User</small></p>
     </div>
-  </div>
-  <div class="card">
-    <img src="..." class="card-img-top" alt="...">
   </div>
   <div class="card p-3 text-right">
     <blockquote class="blockquote mb-0">
@@ -172,6 +167,21 @@
             </div>
         </div>
     </div>
+
+    <button class="open-button" onclick="openForm()">Hi There! Click Me!</button>
+	<div class="form-popup" id="myForm">
+		<form class="form-container">
+			<h1>Thanks for Visiting</h1>
+
+			<label><b>Please Subscribe to the Service at the bottom of the page!</b></label>
+			<p> Lots of Great Content!</p>
+
+			<label><b>Event-Planner</b></label>
+			<p>Stay Classy :)</p>
+
+			<button type="btn" class="btn cancel" onclick="closeForm();return false">Close</button>
+		</form>
+	</div>
 
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
@@ -214,6 +224,7 @@
 </footer>
 <script src="assets/js/sendEmail.js"></script>
 <script src="assets/js/events.js"></script>
+<script src="assets/js/contact.js"></script>
 <!-- Footer -->
 </body>
 </html>

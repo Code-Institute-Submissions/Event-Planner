@@ -36,7 +36,7 @@
         <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.html">About<span class="sr-only"></span></a>
+        <a class="nav-link" href="social.html">Social<span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="events.html">Events<span class="sr-only">(current)</span></a>
@@ -112,6 +112,21 @@
         </div>
     </div>
 
+    <button class="open-button" onclick="openForm()">Hi There! Click Me!</button>
+	<div class="form-popup" id="myForm">
+		<form class="form-container">
+			<h1>Thanks for Visiting</h1>
+
+			<label><b>Please Subscribe to the Service at the bottom of the page!</b></label>
+			<p> Lots of Great Content!</p>
+
+			<label><b>Event-Planner</b></label>
+			<p>Stay Classy :)</p>
+
+			<button type="btn" class="btn cancel" onclick="closeForm();return false">Close</button>
+		</form>
+	</div>
+
  <!-- Footer -->
     <footer class="page-footer font-small special-color-dark pt-4">
 
@@ -154,6 +169,6 @@
     <script src="assets/js/sendEmail.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="assets/js/events.js"></script>
-    <script text="text/javascript" src="assets/src/components/app.js"></script>
+    <script src="assets/js/contact.js"></script>
   </body>
   </html>
